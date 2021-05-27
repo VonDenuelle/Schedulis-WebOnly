@@ -1,0 +1,36 @@
+    <div class=" content">
+      <div class="container">
+        <div class="row">
+          <div class="secondRow col-md-6 order-md-5">
+            <img src="imgs/pic.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6 contents">
+            <div class="row justify-content-center">
+              <div class="forms col-md-8 mt-1">
+                <div class="mb-4">
+                  <center>
+                    <img class="logo" src="imgs/logo2.png">
+                                <center><img class="title" src="imgs/title.png"></center>
+                    <p class="mb-4 fst-italic">Where time is at the palm of your hand</p>
+                    <h3>Sign In</h3>
+                  </center>
+                </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control mt-3" id="uid" placeholder="Username">
+                <label for="floatingInput">Username</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="pwd" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="mt-2">
+                <input type="submit" class="btn btn-warning" value="Sign In"></input>
+                <a type="button" class="btn btn-secondary" href="/ScheduList/register">Sign Up</a>
+              </div>
+                </form>
+              </div><!--/col-md-8-->
+            </div><!--/row justify--->
+          </div><!--/contents-->
+        </div><!--/row-->
+      </div><!--/container-->
+    </div><!--/content-->

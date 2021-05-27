@@ -1,0 +1,25 @@
+body{
+  background: #215D6F !important;
+}
+
+#ui{
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#ui label{
+  color: #000;
+}
+
+img.signup{
+  height: 110px;
+  margin-top: 90px;
+}
+
+/* errore h4 */
+h4#error{
+  opacity: 0;
+  color: #960c0c;
+}
