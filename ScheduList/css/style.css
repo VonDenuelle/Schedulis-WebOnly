@@ -75,17 +75,17 @@ img.logo{
 button.add{
 	background-color: #215D6F;
 }
+button.edit{
+		background-color: #F69333;
+}
+button.del{
+	margin-left:20px;
 
-.tbl{
-	position: relative;
 }
-table{
-	overflow: hidden;
+button.edit:hover{
+		background-color: #cc7623;
 }
 
-tr{
-	cursor: pointer;
-}
 
 /* NOtif CSSs */
 
@@ -117,7 +117,7 @@ color: #ebebeb;
 /* errore h4 */
 h4#error{
   opacity: 0;
-  color: #960c0c;	
+  color: #960c0c;
 }
 
 .container-notif {
@@ -162,7 +162,7 @@ h4#error{
 
 
 /* add task */
-.addtask-notif{
+.addtask-notif,.edittask-notif{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -174,7 +174,7 @@ h4#error{
 	width: 100%;
 }
 
-.addtask-content {
+.addtask-content, .edittask-content {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -188,3 +188,45 @@ h4#error{
 form{
 	width: 100%;
 }
+
+/* custom table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #215D6F;
+}
+tbody tr:hover {
+background-color: rgba(150, 150, 150, 0.1);
+}
+tbody td {
+				color:#333;
+  position: relative;
+
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+	background-color: rgba(150, 150, 150, 0.1);
+  z-index: -1;
+}
+tbody td:hover{
+	background-color: rgba(0, 0, 0	, 0.5	);
+	color:#fff;
+	}

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['id'])) {
-  header("Location: /2nd_sprint/ScheduList(REVISED)");
+  header("Location: /Main/Schedulist");
 }
  ?>
 <!doctype html>

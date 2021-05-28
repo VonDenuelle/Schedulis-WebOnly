@@ -5,6 +5,6 @@
 
 require_once '../config/config.php';
 
-  header("Location: /2nd_sprint/ScheduList(REVISED)");
+  header("Location: /Main/ScheduList");
   exit();
  ?>

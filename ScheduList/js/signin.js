@@ -31,7 +31,7 @@ console.log('signin' );
             $('h4#error').css('opacity', '1').text(val);
             break;
           case 'success':
-            window.location.replace('/2nd_sprint/ScheduList(REVISED)');
+            window.location.replace('/Main/Schedulist');
             break;
         }
       });
@@ -45,7 +45,7 @@ console.log('signin' );
 //for go to signup page button
 $('#singuppage').click(function(event) {
   /* Act on the event */
-  window.location.replace('/2nd_sprint/ScheduList(REVISED)/signUp');
+  window.location.replace('/Main/Schedulist/signUp');
 });
 
 });

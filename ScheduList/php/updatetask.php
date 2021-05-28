@@ -1,22 +1,34 @@
 <?php
-	$connection = mysql_connect("lcoalhost","root","");
-	$db = mysql_select_db($connection, 'schedulist');
+require_once '../config/config.php';
+session_start();
 
-	if(isset($_POST['update'])){
-		$taskid = $_POST["taskid"];
-	    $taskdesc = $_POST["taskdesc"];
-	    $date = $_POST["date"];
-	    $time = $_POST["time"];
+$taskid = $_POST["taskid"];
+$userid = $_SESSION["id"];
+$taskdesc = $_POST['taskdesc'];
+$time = $_POST['time'];
+$date = $_POST['date'];
 
-	    $query = "UPDATE task_tbl SET taskdesc='$taskdesc', date='$date', time='$time' WHERE taskid= '$taskid' ";
-	    $query_run = mysql_query($connection, $query);
+    if (empty($taskdesc) || empty($date) || empty($time)){
+      $error = 'emptyfields';
+      echo json_encode($error);
+      exit();
+    } else{
+			$sql = "UPDATE task_tbl SET taskdesc=?, date=?, time=? WHERE taskid=? AND userid=?";
+			$stmt= mysqli_stmt_init($conn);
 
-	    if ($query_run) {
-    		echo '<script> alert("Data has been Updated"); </script>';
-    		header("location: index.php")
-	    }else{
-	    	echo '<script> alert("Data has not been Updated"); </script>';
-	    }
-	}
+				if (!mysqli_stmt_prepare($stmt, $sql)) {
+					exit();
+				} else {
+					mysqli_stmt_bind_param($stmt, "sssii", $taskdesc,$date,$time,$taskid,$userid);
+					mysqli_stmt_execute($stmt);
+					$error= ['success'];
+					echo json_encode($error);
+					exit();
+				}
+		}
 
-?>
+
+		    mysqli_stmt_close($stmt);   //closes everything to save resource
+		    mysqli_close($conn);
+
+ ?>

@@ -37,7 +37,7 @@ $('#register').submit(function(e) {
             $('h4#error').css('opacity', '1').text(val);
             break;
           case 'success':
-            window.location.replace('/2nd_sprint/ScheduList(REVISED)');
+            window.location.replace('/Main/Schedulist');
             console.log(data);
             break;
         }
